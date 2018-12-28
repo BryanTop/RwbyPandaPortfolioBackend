@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title> K1LL5TR3K Landing Page | Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="showcase">
+        <div class="container " id="mainDiv">
+            <h1>K1LL5TR3K Web Design</h1>
+            <p> Your Website Done Right!</p>
+            
+            <a href="#" onclick="slide()" class="button"> Read More!</a>
+            
+        </div>
+    </header>
+    <div class="main">
+        <div id="right">
+        <a href="#" onclick="slideUp()">x</a>
+        </div>
+        <div id="content">
+        <aside>
+            <div id="sidebar">
+                <h2> headers</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reiciendis quaerat similique
+                    architecto excepturi placeat, tenetur soluta corrupti? 
+                </p>
+            </div>
+        </aside>
+        <section>
+            <div id="main">
+                <h2> headers</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reiciendis quaerat similique
+                    architecto excepturi placeat, tenetur soluta corrupti? Ratione quas recusandae dolores tempora 
+                    autem reiciendis enim minus assumenda ipsa consectetur! Commodi dolore atque omnis ipsum quaerat 
+                    odit minima fugiat quisquam.
+                </p>
+            </div>
+        </section>
+        </div>
+
+        <div class="clear"></div>
+        
+        <section id="secondary">
+            <div class="collumn3">
+                <h3>Header</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum odio commodi, deserunt numquam 
+                    nobis velit adipisci minima odit impedit.
+                </p>
+            </div>
+
+            <div class="collumn3">
+                <h3>Header</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum odio commodi, deserunt numquam 
+                    nobis velit adipisci minima odit impedit.
+                </p>
+            </div>
+            <div class="collumn3">
+                <h3>Header</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque rerum odio commodi, deserunt numquam 
+                    nobis velit adipisci minima odit impedit.
+                </p>
+            </div>
+        </section>
+        
+        <div class="clear"></div>
+        <footer>
+            <p>K1LL5TR3K Web Design, Copyright &copy; 2017</p>
+        </footer>
+    </div>
+
+    
+
+    <script>
+        function slide(){
+            var h = 100;
+            var t = 55;
+           while (h != 50) {
+                b = h + "vh";
+                l = t + "%";
+                document.getElementById("mainDiv").style.top = l;
+                document.getElementById("showcase").style.height = b;
+                h = h - 1;
+                t = t - 1;
+           }
+            
+        }
+
+
+    
+
+
+        function slideUp(){
+            var h = 50;
+            var t = 5;
+           while (h != 101) {
+                b = h + "vh";
+                l = t + "%";
+                alert
+                document.getElementById("mainDiv").style.top = l;
+                document.getElementById("showcase").style.height = b;
+                h = h + 1;
+                t = t + 1;
+           }
+            
+        }
+
+        
+     </script>
+</body>
+</html>

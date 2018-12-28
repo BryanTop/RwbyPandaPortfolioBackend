@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+p {
+    padding: 10px;
+}
+
+body {
+    font:16px/1.6 cursive;
+    background: darkslategray;
+    color: #49E20E;
+}
+
+.clear {
+    clear: both;
+}
+
+.float {
+    float: left;
+}
+
+header {
+    background: black;
+    color:white;
+}
+
+.container {
+    width: 80%;
+    margin:auto;
+}
+
+
+#navbar {
+     background: grey;
+     border-bottom: solid #49E20E 3px;
+ }
+
+ .active {
+    color: #49E20E;
+    font-weight: bold;
+}
+
+
+#navbar h2 {    
+    padding: 20px 10px ;
+    font-size: 34px;
+}
+
+#navbar ul {
+    float: right;
+    margin: 10px;
+    padding: 20px;
+}
+
+#navbar  a {
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 20px;
+    color: white;
+} 
+
+#navbar a:hover {
+    color: #49E20E;
+}
+
+
+#navbar li {
+    list-style: none;
+    display: inline;
+}
+
+#showcase {
+    height: 61.5vh;
+    position: relative;
+    background-image: url("../img/showcase.jpg");
+    background-position: 0;
+}
+ #showcase h1  {
+     position: absolute;
+     top: 40%;
+     left: 30%;
+     font-size: 36px;
+ }
+
+ #showcase p {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+ }
+
+#subscribe {
+    height: 14.25vh;
+    background: gray;
+}
+
+#subscribe h2 {
+    float: left;
+    margin: 20px;
+    font-size: 28px;
+}
+
+.form {
+    float: right;
+    margin: 20px;
+}
+
+
+.input {
+    height: 30px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 2px;
+    margin: 5px;
+}
+
+.form textarea {
+    border-radius: 5px;
+    margin: 0px 5px;
+}
+
+.btn {
+    float: right;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background: #49E20E;
+    color: white;
+    border: #49E20E solid 2px;
+    margin: 3px 5px;
+}
+
+.btn:hover {
+    background: black;
+}
+
+
+
+.box {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    float:left;
+
+}
+
+
+        /* Second Page */ 
+
+
+#aboutUs {
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    float: left;
+    font-size: 20px; 
+}
+
+#aboutUs p:nth-child(odd) {
+    background: grey;
+    color: #49E20E;
+} 
+
+#weDo {
+    background: grey;
+    color: #49E20E;
+    width: 25%;
+    float: right;
+    font-size: 18px;
+    margin: 50px 10px;
+}
+
+/* Third Page */ 
+
+.boxes {
+    width: 60%;
+    margin: 20px;
+    float: left;
+}
+
+#quote {
+    background: grey;
+    margin: 20px 30px;
+    width: 30%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+footer {
+    background: #49E20E;
+    height: 15vh;
+    position: relative;
+    color: white;
+}
+
+footer p {
+    position: absolute;
+    top: 40%;
+    left: 40%
+}
+
+footer p:hover {
+    color: #49E20E;
+}
+
+

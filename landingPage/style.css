@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font:15px/1.6 fantasy;
+    color: #49E20E;
+    background-color:grey;
+    text-align: center;
+}
+
+.button {
+    background-color: #49E20E;
+    color: black;
+    width:80px;
+    padding: 5px;
+    margin: auto;
+    text-decoration: none;
+    display: block;
+}
+
+#showcase {
+    background-image: url("./img/showcase.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    margin: auto;
+    transition: 0.5s;
+}
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    background-color: black;
+    border: 3px solid #49E20E;
+    transition: 0.5s;
+}
+
+.container h1 {
+    font-size: 50px;
+    padding: 10px;
+}
+
+.button:hover {
+    background: black;
+    color: #49E20E;
+}
+
+.container p {
+    margin: 10px;
+    padding: 10px;
+}
+
+main{
+    position: relative;
+
+}
+
+.main a {
+    color: #49E20E;
+    text-decoration: none;
+    position: absolute;
+    right: 3px;
+    background: black;
+    width: 50px;
+    height: 20px;
+}
+
+.main a:hover {
+    background: #49E20E;
+    color: black;
+}
+
+#main {
+
+    background: #49E20E;
+    color: black;
+    min-height: 160px;
+}
+
+#sidebar {
+    
+    background: black;
+    min-height: 160px;
+}
+
+#content {
+    min-height: 25vh;
+}
+
+.collumn3 {
+    width:33.3%;
+    float: left;
+    height: 160px;
+    margin: auto;
+    background: #49E20E;
+    color: black;
+}
+
+section div:nth-child(odd){
+    background: black;
+    color: #49E20E;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    background: black;
+}
+
+
+@media (max-width: 768px ){
+    .collumn3 {
+        width: 100%;
+        float:none;
+    }
+}

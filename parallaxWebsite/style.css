@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px/1.6 fantasy;
+}
+
+#showcase {
+    background-image: url("./img/header.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+#showcase div {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    margin: auto;
+    background: black;
+}
+
+.section {
+    min-height: 50vh;
+    position: relative;
+}
+
+.sectionHeader{
+    background: black;
+    min-height: 12.5vh;
+    color: white;
+}
+
+sctionImage {
+    min-height: 37.5vh;
+}
+
+#sectionAImage {
+    background-image: url("./img/light.jpeg");
+}
+
+#sectionBImage {
+    background-image: url("./img/Dark.jpeg");
+}
+
+#sectionCImage {
+    background-image: url("./img/copper.jpeg");
+}
+
+#sectionAImage, #sectionBImage, #sectionCImage {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0;
+    background-size: cover;
+    height: 37.5vh;
+    color: white; 
+}
+
+#sectionAImage p,  #sectionCImage p {
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    padding: 3px;
+}
+
+#sectionAImage h3,  #sectionCImage h3 {
+    background: black;
+    position: absolute;
+    top: 10%;
+    left: 42%;
+    padding: 3px;
+}
+ 
+#sectionBHeader {
+    color: black;
+    background: grey;
+}
+
+#sectionBImage h3 {
+    background: grey;
+    color: black;
+    position: absolute;
+    top: 10%;
+    left: 42%;
+    padding: 3px;
+}
+
+#sectionBImage p {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    padding: 3px;
+    background: grey;
+    color: black;
+}
+
+footer {
+    color: white;
+    background: black;
+}
+
+@media (max-width: 768px){
+    #sectionAImage p,  #sectionCImage p {
+        top: 50%;
+        left: 15%;
+        margin: 5px;
+    }
+    
+    #sectionAImage h3,  #sectionCImage h3 {
+        top: 10%;
+        left: 35%;
+        margin: 5px;
+    }
+    
+    
+    #sectionBImage h3 {
+        top: 10%;
+        left: 35%;
+        margin: 5px;
+    }
+    
+    #sectionBImage p {
+        top: 50%;
+        left: 15%;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 425px) {
+    #sectionAImage p,  #sectionCImage p {
+        top: 50%;
+        left: 5%;
+        margin: 10px;
+    }
+    
+    #sectionAImage h3,  #sectionCImage h3 {
+        top: 10%;
+        left: 20%;
+        margin: 10px;
+    }
+    
+    
+    #sectionBImage h3 {
+        top: 10%;
+        left: 20%;
+        margin: 10px;
+    }
+    
+    #sectionBImage p {
+        top: 50%;
+        left: 5%;
+        margin: 10px;
+    }
+}

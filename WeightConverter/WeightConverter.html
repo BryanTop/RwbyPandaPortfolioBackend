@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <!-- For mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Weight Converter</title>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-dark">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h1 class="display-3 text-white"> Weight Converter </h1>
+                <div class="form-group">
+                    <input  type="text" name="number" id="number" class="form-control" placeholder="Enter number in pounds">
+                </div>
+            </div>    
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto visibilityNone" id="grams" style="visibility:hidden">
+                <div class="card bg-primary mb-2">
+                    <div class="card-body">
+                        <h2><small> Grams: </small></h2>
+                        <div id="gramsOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto visibilityNone" id="kiloGrams" style="visibility:hidden">
+                <div class="card bg-success mb-2">
+                    <div class="card-body">
+                        <h2><small> KiloGrams: </small></h2>
+                        <div id="kgOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto visibilityNone" id="ounces" style="visibility:hidden">
+                <div class="card bg-danger mb-2">
+                    <div class="card-body">
+                        <h2><small> Ounces: </small></h2>
+                        <div id="ouncesOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        document.getElementById("number").addEventListener("input", function () {
+            input = document.getElementById("number").value;
+            
+            if (input !== "") {
+                document.getElementById("grams").style.visibility = "visible";
+                document.getElementById("kiloGrams").style.visibility = "visible";
+                document.getElementById("ounces").style.visibility = "visible";
+                var grams = input * 453.592;
+                document.getElementById("gramsOutput").innerHTML = grams;
+                var kiloGrams = input * 0.454;
+                document.getElementById("kgOutput").innerHTML = kiloGrams;
+                var ounces = input * 16;
+                document.getElementById("ouncesOutput").innerHTML = ounces;
+            }
+            else{
+                document.getElementById("grams").style.visibility = "hidden";
+                document.getElementById("kiloGrams").style.visibility = "hidden";
+                document.getElementById("ounces").style.visibility = "hidden";
+            }
+
+        })
+
+    </script>
+    
+</body>
+</html>
