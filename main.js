@@ -14,9 +14,9 @@ let projectNameArea = document.getElementsByClassName('projectName');
 let projects = [
     {"name": 'Weight Converter', 'src': '/images/WeightConverter.png', 'url': '/weightConverter/WeightConverter.html'},
     {"name": 'Parallax Website', 'src': '/images/Parallax.png', 'url': '/parallaxWebsite/index.html'},
-    {"name": 'Full Page Landing Page', 'src': '/images/FullpageLanding.png', 'url': '/landingPage/index.html'},
-    {"name": 'Three Page Website', 'src': '/images/ThreePageWebsite.png', 'url': '/fullThreePageWebsite/index.html'},
-    {"name": 'Calculator', 'src': '/images/calculator.png', 'url': '/calculator/calculator.html'},
+    {"name": 'Full Page Landing Page', 'src': '/images/FullpageLanding.PNG', 'url': '/landingPage/index.html'},
+    {"name": 'Three Page Website', 'src': '/images/ThreePageWebsite.PNG', 'url': '/fullThreePageWebsite/index.html'},
+    {"name": 'Calculator', 'src': '/images/calculator.PNG', 'url': '/calculator/calculator.html'},
 ]
 
 
