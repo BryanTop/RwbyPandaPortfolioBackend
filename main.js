@@ -76,7 +76,8 @@ function init() {
         a.style.textDecoration = 'none';
         a.style.background = 'blue'
 
-        div.classList = ['col-md-3', 'm-3']
+        div.classList = ['col-md-3', 'm-3', 'col-xs-1'];
+        div.style.margin = '10px';
         div.appendChild(a);
         projectArea.appendChild(div);
         
