@@ -1,0 +1,299 @@
+$limeGreen: #49E20E
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes(fadeIn)
+    0% 
+        opacity: 0
+    100% 
+        opacity: 1
+
+
++keyframes(fadeInWithMovement)
+    0% 
+        opacity: 0
+    100% 
+        opacity: 1
+        bottom: 0
+        left: 0
+        top: 0
+         
+@media (min-width: 768px)
+    * 
+        margin: 0
+        padding: 0
+
+
+    body 
+        font:15px/1.6 fantasy
+        color: $limeGreen
+        background-color:grey
+        text-align: center
+
+
+    .button 
+        background-color: $limeGreen
+        color: black
+        width: 80px
+        padding: 5px
+        margin: auto
+        text-decoration: none
+        display: block
+
+
+    #showcase 
+        background-image: url("../img/showcase.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        height: 100vh
+        position: relative
+        margin: auto
+        div
+            animation-duration: 2s
+            -webkit-animation-name: fadeIn
+            animation-name: fadeIn
+        h1
+            position: relative
+            -webkit-animation-name: fadeInWithMovement
+            bottom: 3em
+            animation: fadeInWithMovement both 2s 2s
+            transition: bottom 2s linear 2s
+        p
+            position: relative
+            -webkit-animation-name: fadeInWithMovement
+            left: 6em
+            animation: fadeInWithMovement both 2s 2s
+            transition: left 2s linear 2s
+
+        a
+            position: relative
+            -webkit-animation-name: fadeInWithMovement
+            top: 4em
+            animation: fadeInWithMovement both 2s 2s
+            transition: top 2s linear 2s
+
+    .container 
+        position: absolute
+        top: 50%
+        left: 25%
+        width: 50%
+        background-color: black
+        border: 3px solid $limeGreen
+        transition: 0.5s
+
+
+    .container 
+        h1 
+            font-size: 50px
+            padding: 10px
+
+
+    .button:hover 
+        background: black
+        color: $limeGreen
+
+
+    .container 
+        p 
+            margin: 10px
+            padding: 10px
+
+
+    main
+        position: relative
+
+
+
+    .main 
+        a 
+            color: $limeGreen
+            text-decoration: none
+            position: absolute
+            right: 3px
+            background: black
+            width: 50px
+            height: 20px
+        a:hover 
+            background: $limeGreen
+            color: black
+
+
+    #main 
+        background: $limeGreen
+        color: black
+        min-height: 160px
+
+
+    #sidebar 
+        background: black
+        min-height: 160px
+
+
+    #content 
+        min-height: 25vh
+
+
+    .collumn3 
+        width:33.3%
+        float: left
+        height: 160px
+        margin: auto
+        background: $limeGreen
+        color: black
+
+
+    section 
+        div:nth-child(odd)
+            background: black
+            color: $limeGreen
+
+
+    .clear 
+        clear: both
+
+
+    footer 
+        background: black
+
+@media (max-width: 768px)
+    * 
+        margin: 0
+        padding: 0
+
+
+    body 
+        font:15px/1.6 fantasy
+        color: $limeGreen
+        background-color:grey
+        text-align: center
+
+
+    .button 
+        background-color: $limeGreen
+        color: black
+        width: 80px
+        padding: 5px
+        margin: auto
+        text-decoration: none
+        display: block
+
+
+    #showcase 
+        background-image: url("../img/showcase.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        height: 100vh
+        position: relative
+        margin: auto
+        div
+            position: relative
+            top: -0.5em
+            animation-duration: 2s
+            -webkit-animation-name: fadeIn
+            animation-name: fadeIn
+        h1
+            position: relative
+            -webkit-animation-name: fadeInWithMovement
+            bottom: 3em
+            animation: fadeInWithMovement both 2s 2s
+            transition: bottom 2s linear 2s
+        p
+            position: relative
+            -webkit-animation-name: fadeInWithMovement
+            left: 6em
+            animation: fadeInWithMovement both 2s 2s
+            transition: left 2s linear 2s
+
+        a
+            position: relative
+            -webkit-animation-name: fadeInWithMovement
+            top: 4em
+            animation: fadeInWithMovement both 2s 2s
+            transition: top 2s linear 2s
+
+    .container 
+        position: absolute
+        width: 100%
+        
+
+
+    .container 
+        h1 
+            font-size: 50px
+            padding: 10px
+
+
+    .button:hover 
+        background: black
+        color: $limeGreen
+
+
+    .container 
+        p 
+            margin: 10px
+            padding: 10px
+
+
+    main
+        position: relative
+
+
+
+    .main 
+        a 
+            color: $limeGreen
+            text-decoration: none
+            position: absolute
+            right: 3px
+            background: black
+            width: 50px
+            height: 20px
+        a:hover 
+            background: $limeGreen
+            color: black
+
+
+    #main 
+        background: $limeGreen
+        color: black
+        min-height: 160px
+
+
+    #sidebar 
+        background: black
+        min-height: 160px
+
+
+    #content 
+        min-height: 25vh
+
+
+    .collumn3 
+        width:100%
+        float: left
+        height: 160px
+        margin: auto
+        background: $limeGreen
+        color: black
+
+
+    section 
+        div:nth-child(odd)
+            background: black
+            color: $limeGreen
+
+
+    .clear 
+        clear: both
+
+
+    footer 
+        background: black

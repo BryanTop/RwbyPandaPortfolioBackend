@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title> K1LL5TR3K Landing Page | Welcome</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header id="showcase">
@@ -83,14 +83,14 @@
     <script>
         function slide(){
             var h = 100;
-            var t = 55;
+            var t = 0;
            while (h != 50) {
                 b = h + "vh";
-                l = t + "%";
+                l = t + "em";
                 document.getElementById("mainDiv").style.top = l;
                 document.getElementById("showcase").style.height = b;
                 h = h - 1;
-                t = t - 1;
+                t = t - 0.1;
            }
             
         }
@@ -105,11 +105,10 @@
            while (h != 101) {
                 b = h + "vh";
                 l = t + "%";
-                alert
                 document.getElementById("mainDiv").style.top = l;
                 document.getElementById("showcase").style.height = b;
                 h = h + 1;
-                t = t + 1;
+                t = t + 0.1;
            }
             
         }
