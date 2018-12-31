@@ -12,11 +12,11 @@ let projectArea = document.querySelector('#projectArea');
 let projectNameArea = document.getElementsByClassName('projectName');
 
 let projects = [
-    {"name": 'Weight Converter', 'src': '/images/WeightConverter.png', 'url': '/weightConverter/index.html'},
-    {"name": 'Parallax Website', 'src': '/images/Parallax.png', 'url': '/parallaxWebsite/index.html'},
-    {"name": 'Full Page Landing Page', 'src': '/images/FullpageLanding.ss', 'url': '/landingPage/index.html'},
-    {"name": 'Three Page Website', 'src': '/images/ThreePageWebsite.png', 'url': '/fullThreePageWebsite/index.html'},
-    {"name": 'Calculator', 'src': '/images/calculator.png', 'url': '/calculator/index.html'},
+    {"name": 'Weight Converter', 'src': './images/WeightConverter.png', 'url': './weightConverter/index.html'},
+    {"name": 'Parallax Website', 'src': './images/Parallax.png', 'url': './parallaxWebsite/index.html'},
+    {"name": 'Full Page Landing Page', 'src': './images/FullpageLanding.png', 'url': './landingPage/index.html'},
+    {"name": 'Three Page Website', 'src': './images/ThreePageWebsite.png', 'url': './fullThreePageWebsite/index.html'},
+    {"name": 'Calculator', 'src': './images/calculator.png', 'url': './calculator/index.html'},
 ]
 
 

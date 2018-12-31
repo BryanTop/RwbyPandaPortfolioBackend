@@ -1,0 +1,15 @@
+.flags {
+  margin: 0 8px;
+  float: left;
+}
+.flags p {
+  position: relative;
+  bottom: 8rem;
+  left: 5rem;
+  width: 4rem;
+  background: black;
+  color: white;
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
