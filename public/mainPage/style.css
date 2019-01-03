@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../images/DarkBackground.jpg");
+  background: url("./images/DarkBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -26,7 +26,7 @@ body {
   height: 100%;
   width: 100vw;
   padding: 20px;
-  background: url("../images/blueBackground.jpg");
+  background: url("./images/blueBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
