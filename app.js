@@ -47,7 +47,7 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-let port = 3000;
+let port = 3000  || process.env.PORT;
 
 app.listen(port, () => {
     console.log('Example app listening on port ' + port);
