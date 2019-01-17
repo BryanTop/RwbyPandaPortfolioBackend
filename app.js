@@ -18,6 +18,9 @@ app.get('/calculator/index', (req, res) => {
     res.render('calculator/index');
 });
 
+app.get('/NWUI/index', (req, res) => {
+    res.render('NWUI/index');
+})
 
 app.get('/fullThreePageWebsite/index', (req, res) => {
     res.render('fullThreePageWebsite/index');

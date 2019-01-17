@@ -46,11 +46,15 @@ body {
   height: 100%;
   width: 100vw;
   padding: 20px;
-  background: black;
+  background: #000000;
   color: white;
 }
 #projectSection img {
   height: 12rem;
+}
+
+#projectArea {
+  margin: auto;
 }
 
 #contact {
@@ -59,5 +63,19 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.project {
+  transform: translateY(-50%) scale(0.95);
+  opacity: 0;
+  transition: all .5s;
+  height: 12rem;
+  margin: 20px auto !important; 
+}
+
+.project.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
 
 /*# sourceMappingURL=style.css.map */
