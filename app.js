@@ -6,14 +6,32 @@ const project = require('./models/project');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://dbuser:k1ll5tr3k@cluster0-oihxi.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser: true});
+mongoose.connect('mongodb+srv://dbuser:k1ll5tr3k@cluster0-oihxi.mongodb.net/portfolio?retryWrites=true&w=majority',{useNewUrlParser: true});
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  // we're connected!
-  console.log('Connected to db');
-});
+
+// CONNECTION EVENTS
+// When successfully connected
+mongoose.connection.on('connected', function () {
+    console.log('db connected');
+  }); 
+    
+  // If the connection throws an error
+  mongoose.connection.on('error',function (err) { 
+    console.log('Mongoose default connection error: ' + err);
+  }); 
+  
+  // When the connection is disconnected
+  mongoose.connection.on('disconnected', function () { 
+    console.log('Mongoose default connection disconnected'); 
+  });
+  
+  // If the Node process ends, close the Mongoose connection 
+  process.on('SIGINT', function() {   
+    mongoose.connection.close(function () { 
+      console.log('Mongoose default connection disconnected through app termination'); 
+      process.exit(0); 
+    }); 
+  }); 
 
 app.use(helmet());
 app.use(function(req, res, next) {
@@ -33,19 +51,6 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
 
-
-app.get('/users', (req, res) => {
-
-    res.send({
-        users: [
-            {
-                name: 'bryan',
-                lastName: 'top'
-            }
-        ]
-    });
-});
-
 app.get('/NWUI/index', (req, res) => {
     res.render('NWUI/index');
 });
@@ -56,7 +61,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/projects', (req, res, next) => {
-    project.find((err, projects) => {
+    project.find({}, function(err, projects)  {
         if (err) return console.error(err);
         res.json(projects);
     }) 
@@ -72,17 +77,11 @@ app.post('/projects', (req, res, next) => {
         url: req.body.url
     }
 
-    const projectToSave = new project(newProject);
-
-    projectToSave.save((err) => {
-        if (err) return console.log(err);
-
         project.create(projectToSave, (err, project) => {
             if(err) return console.log(err);
 
             res.json({succes: true});
         })
-    })
     
 })
 
