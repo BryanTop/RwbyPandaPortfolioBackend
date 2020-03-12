@@ -72,7 +72,9 @@ app.post('/projects', (req, res, next) => {
         url: req.body.url
     }
 
-    project.save((err) => {
+    const projectToSave = new project(newProject);
+
+    projectToSave.save((err) => {
         if (err) return console.log(err);
 
         project.create(newProject, (err, project) => {
