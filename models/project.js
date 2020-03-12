@@ -9,4 +9,4 @@ const projectSchema = new Schema({
     url: String
 });
 
-module.exports = mongoose.model('project', projectSchema);
+module.exports = mongoose.model('Project', projectSchema);
