@@ -72,11 +72,15 @@ app.post('/projects', (req, res, next) => {
         url: req.body.url
     }
 
-    project.create(newProject)
-    .then(() => {
-        res.json({succes: true});
+    project.save((err) => {
+        if (err) return console.log(err);
+
+        project.create(newProject, (err, project) => {
+            if(err) return console.log(err);
+
+            res.json({succes: true});
+        })
     })
-    .catch(err => res.json({err:err}));
     
 })
 
