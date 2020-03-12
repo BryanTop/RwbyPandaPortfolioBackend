@@ -4,8 +4,11 @@
   "description": "My Portfolio",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app"
+    "test": "mocha test.js",
+    "start:dev": "nodemon app",
+    "start": "node app",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "standard": "standard index.js"
   },
   "repository": {
     "type": "git",
@@ -22,9 +25,28 @@
   "homepage": "https://github.com/RwbyPanda/RwbyPanda.github.io#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
+    "mongoose": "^5.9.4",
     "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "co-exec": "^1.0",
+    "codecov": "^1.0.1",
+    "ghooks": "^1.2.4",
+    "mocha": "^7.0.0",
+    "nodemon": "^2.0.2",
+    "nyc": "^10.0.0",
+    "standard": "^8.4.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run standard"
+    }
   }
 }

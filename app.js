@@ -1,12 +1,30 @@
 const express = require('express');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose'); 
+const project = require('./models/project');
 
 const app = express();
 
-app.use(helmet());
+mongoose.connect('mongodb://localhost/portfolio',{useNewUrlParser: true});
 
-app.use(bodyParser.json());
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  console.log('Connected to db');
+});
+
+app.use(helmet());
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
 
 app.use(helmet.hidePoweredBy({setTo: 'PHP 4.2.0'}));
 
@@ -14,43 +32,55 @@ app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/calculator/index', (req, res) => {
-    res.render('calculator/index');
+
+
+app.get('/users', (req, res) => {
+
+    res.send({
+        users: [
+            {
+                name: 'bryan',
+                lastName: 'top'
+            }
+        ]
+    });
 });
 
 app.get('/NWUI/index', (req, res) => {
     res.render('NWUI/index');
-})
-
-app.get('/fullThreePageWebsite/index', (req, res) => {
-    res.render('fullThreePageWebsite/index');
 });
 
-app.get('/fullThreePageWebsite/about', (req, res) => {
-    res.render('fullThreePageWebsite/about');
-});
-
-app.get('/fullThreePageWebsite/services', (req, res) => {
-    res.render('fullThreePageWebsite/services');
-});
-
-app.get('/landingPage/index', (req, res) => {
-    res.render('landingPage/index');
-});
-
-app.get('/parallaxWebsite/index', (req, res) => {
-    res.render('parallaxWebsite/index');
-});
-
-app.get('/weightConverter/index', (req, res) => {
-    res.render('weightConverter/index');
-});
 
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-let port = process.env.PORT || 3000;
+app.get('/projects', (req, res, next) => {
+    project.find((err, projects) => {
+        if (err) return console.error(err);
+        res.json(projects);
+    }) 
+})
+
+app.post('/projects', (req, res, next) => {
+    console.log(req.body.title);
+
+    const newProject = {
+        title: req.body.title,
+        description: req.body.description,
+        imgUrl: req.body.imgUrl,
+        url: req.body.url
+    }
+
+    project.create(newProject)
+    .then(() => {
+        res.json({succes: true});
+    })
+    .catch(err => res.json({err:err}));
+    
+})
+
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
     console.log('Example app listening on port ' + port);
