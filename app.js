@@ -77,9 +77,11 @@ app.post('/projects', (req, res, next) => {
         url: req.body.url
     }
 
+    console.log(newProject);
+
         project.create(newProject, (err, project) => {
             if(err) return console.log(err);
-
+            console.log(project);
             res.json({succes: true});
         })
     
