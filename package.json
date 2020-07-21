@@ -37,7 +37,7 @@
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "co-exec": "^1.0",
-    "codecov": "^1.0.1",
+    "codecov": "^3.7.1",
     "ghooks": "^1.2.4",
     "mocha": "^7.0.0",
     "nodemon": "^2.0.2",
