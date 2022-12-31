@@ -33,7 +33,7 @@
     "node-sass": "^4.11.0"
   },
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^5.1.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "co-exec": "^1.0",
